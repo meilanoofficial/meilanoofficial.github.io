@@ -2,43 +2,78 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Copy Text Fixed</title>
+    <title>Copy Text Simple</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
+            font-family: 'Poppins', sans-serif;
+            background: #eef2f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
         }
         button {
-            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
             cursor: pointer;
-            margin-bottom: 10px;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
         }
         #status {
+            font-size: 14px;
             color: green;
             margin-top: 10px;
             font-weight: bold;
+        }
+        #box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f1f1f1;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
+<div class="container">
+    <h2>Copy Text</h2>
     <button onclick="copyText()">Copy Teks</button>
     <div id="status"></div>
+    <div id="box">sudah dicopy</div>
+</div>
 
-    <script>
-        function copyText() {
-            // Buat element sementara
-            const tempInput = document.createElement("input");
-            tempInput.value = "sudah dicopy";
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
+<script>
+    function copyText() {
+        const tempInput = document.createElement("input");
+        tempInput.value = "sudah dicopy";
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999); // Untuk HP
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
 
-            // Tampilkan status
-            document.getElementById("status").innerText = "berhasil di copy";
-        }
-    </script>
+        document.getElementById("status").innerText = "berhasil di copy";
+    }
+</script>
 
 </body>
 </html>
