@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Copy Text Fitri Octaviana Lestari</title>
+    <title>Copy CV</title>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -10,8 +10,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .container {
             background: #fff;
@@ -19,7 +20,8 @@
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            width: 300px;
+            max-width: 800px;
+            width: 100%;
         }
         button {
             background-color: #3498db;
@@ -47,24 +49,44 @@
             background: #f1f1f1;
             border: 2px dashed #ccc;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 14px;
             color: #555;
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Copy Text</h2>
-    <button onclick="copyText()">Copy Teks Biodata FO Letari</button>
+    <h2>Copy CV Fitri Octaviana Lestari</h2>
+    <button onclick="copyText()">Copy Teks CV</button>
     <div id="status"></div>
-    <div id="box">sudah dicopy</div>
+    <div id="box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="id"&gt;<br>
+&lt;head&gt;<br>
+    &lt;meta charset="UTF-8"&gt;<br>
+    &lt;title&gt;Curriculum Vitae fitrioctaviana&lt;/title&gt;<br>
+    &lt;style&gt;<br>
+    /* (CSS kamu di sini, aku potong supaya lebih singkat) */<br>
+    &lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;div class="container"&gt;<br>
+        &lt;h1&gt;CURRICULUM VITAE&lt;/h1&gt;<br>
+        &lt;!-- Profile, Pendidikan, Kemampuan, Pengalaman Kerja, dsb --&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
 </div>
 
 <script>
-    function copyText() {
-        const tempInput = document.createElement("input");
-        tempInput.value = "<!DOCTYPE html>
+function copyText() {
+    const textToCopy = `<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -73,15 +95,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            overflow-x: hidden; /* Untuk menghindari scroll horizontal */
+            overflow-x: hidden;
         }
         .container {
             max-width: 700px;
             margin: auto;
             border: 2px solid black;
             padding: 20px;
-            opacity: 0; /* Mulai dengan opacity 0 */
-            animation: fadeIn 1.5s ease-in-out forwards; /* Animasi fade-in */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
         h1 {
             text-align: center;
@@ -93,7 +115,7 @@
             justify-content: space-between;
             margin-bottom: 20px;
             text-align: left;
-            animation: slideIn 1s ease-out forwards; /* Animasi slide-in */
+            animation: slideIn 1s ease-out forwards;
         }
         .profile img {
             width: 120px;
@@ -130,120 +152,46 @@
             margin-bottom: 5px;
             text-align: left;
         }
-
-        /* Animasi fade-in */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-
-        /* Animasi slide-in */
         @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-
-        /* RESPONSIVE SETTINGS */
         @media (max-width: 768px) {
-            body {
-                margin: 20px;
-            }
-            .container {
-                width: 100%;
-                padding: 15px;
-            }
-            .profile {
-                flex-direction: column-reverse;
-                align-items: center;
-                text-align: left;
-                animation: fadeIn 1.5s ease-in-out forwards; /* Animasi fade-in */
-            }
-            .profile-info {
-                width: 100%;
-                margin-top: 20px;
-            }
-            .profile img {
-                width: 100px;
-                height: 130px;
-                margin-bottom: 10px;
-            }
-            .profile-info table td {
-                text-align: left;
-            }
+            body { margin: 20px; }
+            .container { width: 100%; padding: 15px; }
+            .profile { flex-direction: column-reverse; align-items: center; text-align: left; animation: fadeIn 1.5s ease-in-out forwards; }
+            .profile-info { width: 100%; margin-top: 20px; }
+            .profile img { width: 100px; height: 130px; margin-bottom: 10px; }
+            .profile-info table td { text-align: left; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>CURRICULUM VITAE</h1>
-
         <div class="profile">
             <div class="profile-info">
                 <table>
-                    <tr>
-                        <td>Nama</td>
-                        <td>:</td>
-                        <td>FITRI OCTAVIANA LESTARI</td>
-                    </tr>
-                    <tr>
-                        <td>Tempat, Tgl Lahir</td>
-                        <td>:</td>
-                        <td>Blitar, 18 Oktober 2007</td>
-                    </tr>
-                    <tr>
-                        <td>Jenis Kelamin</td>
-                        <td>:</td>
-                        <td>Perempuan</td>
-                    </tr>
-                    <tr>
-                        <td>Agama</td>
-                        <td>:</td>
-                        <td>Islam</td>
-                    </tr>
-                    <tr>
-                        <td>Kewarganegaraan</td>
-                        <td>:</td>
-                        <td>Indonesia</td>
-                    </tr>
-                    <tr>
-                        <td>Status</td>
-                        <td>:</td>
-                        <td>Belum Kawin</td>
-                    </tr>
-                    <tr>
-                        <td>Alamat Sekarang</td>
-                        <td>:</td>
-                        <td>Dusun Banjarjo RT 03 RW 01, Desa Slorok<br>Kec Doko, Kab Blitar</td>
-                    </tr>
-                    <tr>
-                        <td>Telepon</td>
-                        <td>:</td>
-                        <td>+62 857-8547-xxxx</td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td>:</td>
-                        <td>fitrioctaviana**@gmail.com</td>
-                    </tr>
+                    <tr><td>Nama</td><td>:</td><td>FITRI OCTAVIANA LESTARI</td></tr>
+                    <tr><td>Tempat, Tgl Lahir</td><td>:</td><td>Blitar, 18 Oktober 2007</td></tr>
+                    <tr><td>Jenis Kelamin</td><td>:</td><td>Perempuan</td></tr>
+                    <tr><td>Agama</td><td>:</td><td>Islam</td></tr>
+                    <tr><td>Kewarganegaraan</td><td>:</td><td>Indonesia</td></tr>
+                    <tr><td>Status</td><td>:</td><td>Belum Kawin</td></tr>
+                    <tr><td>Alamat Sekarang</td><td>:</td><td>Dusun Banjarjo RT 03 RW 01, Desa Slorok<br>Kec Doko, Kab Blitar</td></tr>
+                    <tr><td>Telepon</td><td>:</td><td>+62 857-8547-xxxx</td></tr>
+                    <tr><td>Email</td><td>:</td><td>fitrioctaviana**@gmail.com</td></tr>
                 </table>
             </div>
             <div>
                 <img src="https://www.dropbox.com/scl/fi/1qkvfmwtcokiaj6r0au9l/875d2b5b-6648-4d3c-a3bf-a4e9b7f7271f.webp?rlkey=g686okiuj8aji4uukcbv56scf&raw=1" alt="Foto Profil">
             </div>
         </div>
-
         <hr>
-
         <div class="section">
             <h2>PENDIDIKAN</h2>
             <ul>
@@ -253,9 +201,7 @@
                 <li>2023 - 2026 SMK Negeri 1 Doko</li>
             </ul>
         </div>
-
         <hr>
-
         <div class="section">
             <h2>KEMAMPUAN</h2>
             <ul>
@@ -265,9 +211,7 @@
                 <li>Menggunakan Internet</li>
             </ul>
         </div>
-
         <hr>
-
         <div class="section">
             <h2>PENGALAMAN KERJA</h2>
             <ul>
@@ -276,15 +220,17 @@
         </div>
     </div>
 </body>
-</html>";
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // Untuk HP
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
+</html>`;
 
-        document.getElementById("status").innerText = "berhasil di copy";
-    }
+    navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+            document.getElementById("status").innerText = "berhasil di copy";
+        })
+        .catch(err => {
+            document.getElementById("status").innerText = "Gagal menyalin teks";
+            console.error('Error:', err);
+        });
+}
 </script>
 
 </body>
