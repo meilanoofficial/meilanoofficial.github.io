@@ -2,25 +2,43 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Copy Text</title>
+    <title>Copy Text Fixed</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 50px;
         }
-        textarea {
-            width: 300px;
-            height: 100px;
-            margin-bottom: 10px;
-        }
         button {
             padding: 10px 20px;
             cursor: pointer;
+            margin-bottom: 10px;
+        }
+        #status {
+            color: green;
+            margin-top: 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h2>Salin Teks</h2>
-    <textarea id="textToCopy" placeholder="Isi teks di sini..."></textarea><br>
-    <button onclick="copy
+    <button onclick="copyText()">Copy Teks</button>
+    <div id="status"></div>
+
+    <script>
+        function copyText() {
+            // Buat element sementara
+            const tempInput = document.createElement("input");
+            tempInput.value = "sudah dicopy";
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            // Tampilkan status
+            document.getElementById("status").innerText = "berhasil di copy";
+        }
+    </script>
+
+</body>
+</html>
